@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { questions } from "./question";
+import { questions } from "./questionsData";
 
 export default function QuizApp() {
   const [question, setQuestion] = useState(questions);
