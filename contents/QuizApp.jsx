@@ -19,10 +19,16 @@ export default function QuizApp() {
   return (
     <div className="background">
       <div className="container">
-        <div className="dots">
-          <div><span className="green"></span> Correct</div>
-          <div><span className="red"></span> Wrong</div>
-        </div>
+        {index === question.length && (
+          <div className="dots">
+            <div>
+              <span className="green"></span> Correct
+            </div>
+            <div>
+              <span className="red"></span> Wrong
+            </div>
+          </div>
+        )}
         <div className="heading">
           <h2>Quiz App</h2>
           {index === question.length && (
@@ -49,7 +55,7 @@ export default function QuizApp() {
         )}
 
         {/* // displaying all attempeted questions */}
-        
+
         {index === question.length && (
           <>
             <div className="result">
